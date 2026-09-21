@@ -1,0 +1,29 @@
+# Archivos del sistema y entornos
+.DS_Store
+Thumbs.db
+*.tmp
+*~
+
+# Entornos virtuales de Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Dependencias y compilaciones
+node_modules/
+target/
+dist/
+build/
+*.car
+*.db
+*.sqlite
+*.sqlite3
+
+# Credenciales y secretos
+.env
+.env.local
+*.pem
+*.key
+*.secret
