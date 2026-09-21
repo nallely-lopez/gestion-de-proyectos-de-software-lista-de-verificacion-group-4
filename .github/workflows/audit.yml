@@ -1,0 +1,38 @@
+name: Auditoria Automatizada Open Hub Tec - CMMI y MoProSoft
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  auditoria-calidad:
+    name: Auditoria CMMI / MoProSoft e Insignias
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar codigo del repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Ejecutar Herramienta de Auditoria Open Hub Tec
+        run: |
+          python scripts/audit_tool.py
+
+      - name: Publicar Resumen de Auditoria en GitHub Actions
+        run: |
+          cat AUDITORIA_INFORME.md >> $GITHUB_STEP_SUMMARY
+
+      - name: Preservar Informe como Artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: informe-auditoria-calidad
+          path: AUDITORIA_INFORME.md
