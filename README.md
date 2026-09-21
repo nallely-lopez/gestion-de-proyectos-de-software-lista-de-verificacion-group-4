@@ -106,3 +106,14 @@ cat AUDITORIA_INFORME.md
 * **Equipo:** Grupo 4
 * **Semestre:** 7mo Semestre de Ingeniería en Sistemas Computacionales
 * **Ubicación:** Heroica Ciudad de Tlaxiaco, Oaxaca, México.
+
+
+
+## CALIFICACIÓN 
+
+*1. Indicador C: Creatividad y Propuesta en el Sistema de Insignias y Auditoría
+*2. Indicador A: Adaptación a situaciones y contextos complejos
+*3. Indicadores E y F: Integración Interdisciplinaria y Trabajo Autónomo
+*Total 20 puntos 
+
+
